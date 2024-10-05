@@ -1,3 +1,10 @@
+
+sample_response.txt
+
+This is the HTML response that Selenium is grabbing in grabdata.py
+and scanning through for the data that's needed.
+
+--------------------------------------------------------------------------------
 <!-- opalstack webcobrand v2.0 20200304 -->
 <!doctype html>
 	<script type="application/ld+json" id="pageinfo">
