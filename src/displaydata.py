@@ -43,8 +43,9 @@ RENDER_PATH = './render/'
 # Plotting map limits for the X and Y direction
 MIN_X, MAX_X = -100, -60   # Longitude limits
 MIN_Y, MAX_Y = 24, 40      # Latitude limits
-
+RES = 300
 TOTAL_FRAMES = 368
+
 current_frame = 0
 
 # Plot the shapefile
@@ -150,10 +151,10 @@ def update(frame):
     plt.gca().spines['bottom'].set_visible(True)
 
     # FRAME += 1
-    plt.savefig(f'{RENDER_PATH}my_plot{frame}.png', dpi=400, bbox_inches='tight')
+    plt.savefig(f'{RENDER_PATH}my_plot{frame}.png', dpi=RES, bbox_inches='tight')
     b = time.time()
     print(f"rendering image, time taken {b-a}")
-    print(f"est time left = {round((b-a) * TOTAL_FRAMES-current_frame, 2)} seconds")
+    print(f"est time left = {round( ((b-a) * TOTAL_FRAMES-current_frame) / 3600, 2)} hours")
 
 sm = plt.cm.ScalarMappable(cmap='magma', norm=plt.Normalize(vmin=0, vmax=100))
 sm._A = []  # Dummy array for colorbar
