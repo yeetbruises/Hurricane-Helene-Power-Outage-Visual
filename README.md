@@ -9,7 +9,8 @@
    |  _ <    | |___   / ___ \ U| |_| |\         
    |_| \_\   |_____| /_/   \_\ |____/ u         
    //   \\_  <<   >>  \\    >>  |||_            
-  (__)  (__)(__) (__)(__)  (__)(__)_)         
+  (__)  (__)(__) (__)(__)  (__)(__)_)    
+
     __  __  U _____ u 
   U|' \/ '|u\| ___"|/ 
   \| |\/| |/ |  _|"   
@@ -37,7 +38,6 @@ https://docs.google.com/spreadsheets/d/1uMN-ERc4fzGC_IoAdbbMCbVw6xl04-CsXdJeEybc
 </blockquote>
 
 ```
-
 Overview - 
 
 This project was developed in Python using various packages like 
@@ -51,8 +51,8 @@ used (Source 4). The final output was displayed using Matplotlib,
 resulting in an automated system for data collection and 
 visualization.
 ```
-<blockquote>
 
+<blockquote>
 Sources -
 
 [1] https://simplemaps.com/data/us-counties
