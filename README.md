@@ -1,4 +1,7 @@
- ![Demo](https://imgur.com/a/vLDE9hN)
+
+![poweroutagenew-ezgif com-optimize](https://github.com/user-attachments/assets/3fab7072-849b-401d-806c-68e3610acc0d)
+
+
 ```
     ____    U _____ u    _      ____            
  U |  _"\ u \| ___"|/U  /"\  u |  _"\           
