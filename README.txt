@@ -70,7 +70,7 @@ county-fips.csv
  uscounties.csv - Other sources of county data, e.g. FIPS codes, population.
 
 
-requirements.txt -
+requirements.txt - Run "pip install -r requirements.txt" 
 
     beautifulsoup4==4.12.3
     geopandas==1.0.1
