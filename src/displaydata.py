@@ -24,8 +24,6 @@ from shapely.geometry import box
 
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
-FRAME = 1
-
 # Load the Shapefile
 SHAPEFILE_PATH = './shapefiles/cb_2018_us_county_20m.shp' 
 gdf = gpd.read_file(SHAPEFILE_PATH)
@@ -46,10 +44,12 @@ RENDER_PATH = './render/'
 MIN_X, MAX_X = -100, -60   # Longitude limits
 MIN_Y, MAX_Y = 24, 40      # Latitude limits
 
+TOTAL_FRAMES = 368
+current_frame = 0
+
 # Plot the shapefile
 fig, ax = plt.subplots(figsize=(9, 7.3), facecolor='lightgray')  # You can adjust the size as needed
   
-
 # Function to get population by county name
 def get_population_by_county(county_name, state):
     # Load the output CSV file
@@ -67,6 +67,9 @@ def get_population_by_county(county_name, state):
         return None
 
 def update(frame):
+    global current_frame 
+    current_frame += 1
+
     a = time.time()
     frameu = frame + 100
     ax.clear()
@@ -150,7 +153,7 @@ def update(frame):
     plt.savefig(f'{RENDER_PATH}my_plot{frame}.png', dpi=400, bbox_inches='tight')
     b = time.time()
     print(f"rendering image, time taken {b-a}")
-    print(f"est time left = {(b-a) * 368-frame}")
+    print(f"est time left = {round((b-a) * TOTAL_FRAMES-current_frame, 2)} seconds")
 
 sm = plt.cm.ScalarMappable(cmap='magma', norm=plt.Normalize(vmin=0, vmax=100))
 sm._A = []  # Dummy array for colorbar
@@ -159,6 +162,6 @@ sm._A = []  # Dummy array for colorbar
 cbar = plt.colorbar(sm, orientation='vertical', pad=-0.08, shrink=0.4, fraction=0.04)  # Vertical colorbar
 #cbar.set_label("Percentage of County")  # Optional: add label to the colorbar
 
-ani = FuncAnimation(fig, update, frames=368, interval=50)
+ani = FuncAnimation(fig, update, frames=TOTAL_FRAMES, interval=50)
 
 plt.show()
