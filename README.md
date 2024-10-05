@@ -1,5 +1,5 @@
-
 ![poweroutagenew-ezgif com-optimize](https://github.com/user-attachments/assets/3fab7072-849b-401d-806c-68e3610acc0d)
+
 
 
 ```
@@ -19,46 +19,54 @@
    (./  \.) (__) (__) 
 ```
 
-Consider helping out the people of NC and Appalachia who are facing mass
-devestation from the effects of Hurricane Helene. Even $5 will help.
+**Consider helping out the people of NC and Appalachia who are facing mass
+devestation from the effects of Hurricane Helene. Even $5 will help.**
+<blockquote>
 
-    High Country United Way (Watauga County, Ashe County, & others) 
-    https://www.highcountryunitedway.org/
+High Country United Way (Watauga County, Ashe County, & others) 
+https://www.highcountryunitedway.org/
 
-    United Way of Asheville and Buncombe County 
-    https://www.unitedwayabc.org/ 
+United Way of Asheville and Buncombe County 
+https://www.unitedwayabc.org/ 
 
-    North Carolina Disaster Relief Fund
-    https://pay.payitgov.com/ncdonations?fbclid=IwY2xjawFoEXRleHRuA2FlbQIxMQABHbNfdn7BxMaOp2Oq7DyABGyh7yGKnz43CcKtt7Ftmzk1y9dJPbUsB0fcQw_aem__auXmn4m0z389Z309JEJeg
+North Carolina Disaster Relief Fund
+https://pay.payitgov.com/ncdonations?fbclid=IwY2xjawFoEXRleHRuA2FlbQIxMQABHbNfdn7BxMaOp2Oq7DyABGyh7yGKnz43CcKtt7Ftmzk1y9dJPbUsB0fcQw_aem__auXmn4m0z389Z309JEJeg
 
-    A community-curated list of resources and places to donate to:
-    https://docs.google.com/spreadsheets/d/1uMN-ERc4fzGC_IoAdbbMCbVw6xl04-CsXdJeEybcUCA/edit?gid=0#gid=0
+A community-curated list of resources and places to donate to:
+https://docs.google.com/spreadsheets/d/1uMN-ERc4fzGC_IoAdbbMCbVw6xl04-CsXdJeEybcUCA/edit?gid=0#gid=0
+</blockquote>
+
+```
 
 Overview - 
 
-    This project was developed in Python using various packages like 
-    Selenium, GeoPandas, and Shapely. I made in one go over 24 hours. 
-    It started when I came across an interesting data source on USAToday's 
-    website (Source 2) and built a Selenium scraper to compile the data 
-    into a CSV file. Using Pandas, I processed the CSV and linked the 
-    county names to a shapefile of U.S. counties from Source 1. To do 
-    this, I converted the county names to FIPS IDs, which the shapefile 
-    used (Source 4). The final output was displayed using Matplotlib, 
-    resulting in an automated system for data collection and 
-    visualization.
+This project was developed in Python using various packages like 
+Selenium, GeoPandas, and Shapely. I made in one go over 24 hours. 
+It started when I came across an interesting data source on USAToday's 
+website (Source 2) and built a Selenium scraper to compile the data 
+into a CSV file. Using Pandas, I processed the CSV and linked the 
+county names to a shapefile of U.S. counties from Source 1. To do 
+this, I converted the county names to FIPS IDs, which the shapefile 
+used (Source 4). The final output was displayed using Matplotlib, 
+resulting in an automated system for data collection and 
+visualization.
+```
+<blockquote>
 
 Sources -
 
-    [1] https://simplemaps.com/data/us-counties
+[1] https://simplemaps.com/data/us-counties
 
-    [2] https://data.usatoday.com/national-power-outage-map-tracker/
+[2] https://data.usatoday.com/national-power-outage-map-tracker/
 
-    [3] https://github.com/hadley/data-counties/blob/master/county-fips.csv
+[3] https://github.com/hadley/data-counties/blob/master/county-fips.csv
 
-    [4] https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
+[4] https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
 
-    [5] https://patorjk.com/software/taag/#p=display&f=Dancing%20Font
+[5] https://patorjk.com/software/taag/#p=display&f=Dancing%20Font
+</blockquote>
 
+```
 File Descriptions:
 
     grabdata.py - This file scrapes data from a USAToday website and 
@@ -81,8 +89,8 @@ File Descriptions:
 
 county-fips.csv
  uscounties.csv - Other sources of county data, e.g. FIPS codes, population.
-
-
+```
+```
 requirements.txt - Run "pip install -r requirements.txt" 
 
     beautifulsoup4==4.12.3
@@ -96,3 +104,4 @@ requirements.txt - Run "pip install -r requirements.txt"
     Shapely==2.0.6
     webdriver_manager==4.0.2
 
+```
