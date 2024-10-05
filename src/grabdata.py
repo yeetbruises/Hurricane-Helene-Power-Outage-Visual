@@ -22,10 +22,10 @@ from bs4 import BeautifulSoup
 import os
 import time
 
+OUTPUT_FILE = './outagedata/outputnew2.csv'
+WEB_PREFIX = 'https://data.usatoday.com/national-power-outage-map-tracker/area/'
 
 def grabdata(url):
-    output_file = './outagedata/outputnew2.csv'
-
     # Send a GET request to fetch the content of the page
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
@@ -157,7 +157,7 @@ def grabdata(url):
 
         print("alpha")
         # Open the website where the file is downloaded
-        driver.get(f"https://data.usatoday.com/national-power-outage-map-tracker/area/{urlized_name}/{countyid}/")  # Replace with the URL you're monitoring
+        driver.get(f"{WEB_PREFIX}{urlized_name}/{countyid}/")  # Replace with the URL you're monitoring
         print("beta")
 
         # Intercept and check for the file
@@ -226,9 +226,9 @@ def grabdata(url):
             dates.append(new_date)
 
 
-        if os.path.exists(output_file):
+        if os.path.exists(OUTPUT_FILE):
             # Read the CSV into a DataFrame
-            df = pd.read_csv(output_file)
+            df = pd.read_csv(OUTPUT_FILE)
             
             # Check if the column already exists
             column_name = county_dict[countyid]
@@ -244,7 +244,7 @@ def grabdata(url):
                 df = pd.merge(df, new_df, on='Dates', how='outer')
 
                 # Save the DataFrame back to the CSV (overwrite)
-                df.to_csv(output_file, index=False)
+                df.to_csv(OUTPUT_FILE, index=False)
                 print(f"Column '{column_name}' added successfully!")
             else:
                 print(f"Column '{column_name}' already exists!")
@@ -256,10 +256,10 @@ def grabdata(url):
             })
 
             # Save the DataFrame to a CSV file
-            df.to_csv(output_file, index=False)
+            df.to_csv(OUTPUT_FILE, index=False)
 
         # Ensure data is good
-        df = pd.read_csv(output_file)
+        df = pd.read_csv(OUTPUT_FILE)
         df['Dates'] = pd.to_datetime(df['Dates'])
         all_unique = df['Dates'].is_unique
 
