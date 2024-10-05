@@ -67,7 +67,7 @@ File Descriptions:
                 * "outputnew.csv" is the complete one with all the needed data.
 
 county-fips.csv
-uscounties.csv  - Other sources of county data, e.g. FIPS codes, population.
+ uscounties.csv - Other sources of county data, e.g. FIPS codes, population.
 
 
 requirements.txt -
