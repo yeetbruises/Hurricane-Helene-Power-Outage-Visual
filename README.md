@@ -1,4 +1,5 @@
-![poweroutagenew-ezgif com-optimize](https://github.com/user-attachments/assets/3fab7072-849b-401d-806c-68e3610acc0d)
+
+![0253rn4teksd1](https://github.com/user-attachments/assets/15906bce-3fd7-4631-8b6e-15c9ab6e23d0)
 
 
 
